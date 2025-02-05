@@ -77,14 +77,14 @@ async def main():
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text(
-       "I Am A Bot For Download Links From Your **.TXT** File And Then Upload That File On Telegram So Basically If You Want To Use Me First Send Me ⟰ /saini Command And Then Follow Few Steps..", reply_markup=InlineKeyboardMarkup(
+       "I Am A Bot For Download Links From Your **.TXT** File And Then Upload That File On Telegram So Basically If You Want To Use Me First Send Me ⟰ /upload Command And Then Follow Few Steps..", reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("✜ 𝐉𝐨𝐢𝐧 𝐔𝐩𝐃𝐚𝐭𝐞 Group 🥱✜" ,url=f"https://t.me/+taZCy5OkoMUwNzI9") ],
+                    InlineKeyboardButton("✜ 𝐉𝐨𝐢𝐧 𝐔𝐩𝐃𝐚𝐭𝐞 Group 🥱✜" ,url=f"https://t.me/+ovw8WwlIcWZmYTdl") ],
                     [
-                    InlineKeyboardButton("✜ NIKHIL SAINI ✜" ,url="https://t.me/Nikhil_saini_khe") ],
+                    InlineKeyboardButton("✜ NIKHIL SAINI ✜" ,url="https://t.me/rajrmahar") ],
                     [
-                    InlineKeyboardButton("FOLLOW " ,url="https://www.instagram.com/nikhil.saini.khe") ]                               
+                    InlineKeyboardButton("FOLLOW " ,url="https://www.instagram.com/rajrmahar") ]                               
             ]))
 
 @bot.on_message(filters.command(["stop"]))
@@ -94,10 +94,10 @@ async def restart_handler(_, m):
 
 
 
-@bot.on_message(filters.command(["saini"]))
+@bot.on_message(filters.command(["upload"]))
 
 async def upload(bot: Client, m: Message):
-    editable = await m.reply_text('𝕤ᴇɴᴅ ᴛxᴛ ғɪʟᴇ ⚡️')
+    editable = await m.reply_text('𝐓𝐨 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐀 𝐓𝐱𝐭 𝐅𝐢𝐥𝐞 𝐒𝐞𝐧𝐝 𝐇𝐞𝐫𝐞 ⏍')
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await input.delete(True)
@@ -120,7 +120,7 @@ async def upload(bot: Client, m: Message):
            return
     
    
-    await editable.edit(f"**𝕋ᴏᴛᴀʟ ʟɪɴᴋ𝕤 ғᴏᴜɴᴅ ᴀʀᴇ🔗🔗** **{len(links)}**\n\n**𝕊ᴇɴᴅ 𝔽ʀᴏᴍ ᴡʜᴇʀᴇ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ɪ𝕤** **1**")
+    await editable.edit(f"**𝐓𝐨𝐭𝐚𝐥 𝐋𝐢𝐧𝐤 𝐅𝐨𝐮𝐧𝐝 𝐀𝐫𝐞🔗🔗** **{len(links)}**\n\n**𝐒𝐞𝐧𝐝 𝐅𝐫𝐨𝐦 𝐖𝐡𝐞𝐫𝐞 𝐘𝐨𝐮 𝐖𝐚𝐧𝐭 𝐓𝐨 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐈𝐧𝐢𝐭𝐚𝐥 𝐢𝐬** **1**")
     input0: Message = await bot.listen(editable.chat.id)
     raw_text = input0.text
     await input0.delete(True)
@@ -170,15 +170,15 @@ async def upload(bot: Client, m: Message):
     await input3.delete(True)
 
     # Default credit message
-    credit = "️@Nikhil_saini_khe 🕊️⁪⁬⁮⁮⁮"
+    credit = "️@rajrmahar 🕊️⁪⁬⁮⁮⁮"
     if raw_text3 == '1':
-        CR = '@Nikhil_saini_khe 🕊️'
+        CR = '@rajrmahar 🕊️'
     elif raw_text3:
         CR = raw_text3
     else:
         CR = credit
    
-    await editable.edit("🌄 Now send the Thumb url if don't want thumbnail send no ")
+    await editable.edit("🌄 Now send the Thumb url if don't want thumbnail send No ")
     input6 = message = await bot.listen(editable.chat.id)
     raw_text6 = input6.text
     await input6.delete(True)
@@ -189,7 +189,7 @@ async def upload(bot: Client, m: Message):
         getstatusoutput(f"wget '{thumb}' -O 'thumb.jpg'")
         thumb = "thumb.jpg"
     else:
-        thumb == "no"
+        thumb == "No"
 
     if len(links) == 1:
         count = 1
@@ -270,8 +270,8 @@ async def upload(bot: Client, m: Message):
 
             try:  
                 
-                cc = f'**🎥 VIDEO ID: {str(count).zfill(3)}.\n\n📄 Title: {name1} {res} 🥀🅽🅸🅺🅷🅸🅻🦅.mkv\n\n<pre><code>🔖 Batch Name: {b_name}</code></pre>\n\n📥 Extracted By : {CR}**'
-                cc1 = f'**📁 FILE ID: {str(count).zfill(3)}.\n\n📄 Title: {name1} 🥀🆂🅰🅸🅽🅸🦅.pdf \n\n<pre><code>🔖 Batch Name: {b_name}</code></pre>\n\n📥 Extracted By : {CR}**'
+                cc = f'**VIDEO ID: {str(count).zfill(3)}.\n\n📄 Title: {name1} {res}.mkv\n\n<pre><code>🔖 Batch Name: {b_name}</code></pre>\n\n📥 Extracted By : {CR}**'
+                cc1 = f'**FILE ID: {str(count).zfill(3)}.\n\n📄 Title: {name1}.pdf \n\n<pre><code>🔖 Batch Name: {b_name}</code></pre>\n\n📥 Extracted By : {CR}**'
                     
                 
                 if "drive" in url:
@@ -327,7 +327,7 @@ async def upload(bot: Client, m: Message):
                           
                 else:
                     Show = f"❊⟱ 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 ⟱❊ »\n\n📄 Title:- `{name}\n\n⌨ 𝐐𝐮𝐥𝐢𝐭𝐲 » {raw_text2}`\n\n**🔗 𝐔𝐑𝐋 »** `{url}`"
-                    prog = await m.reply_text(f"**Downloading:-**\n\n**📄 Title:-** `{name}\n\nQuality - {raw_text2}`\n\n**link:**`{url}`\n\n **Bot Made By NIKHIL SAINI**")
+                    prog = await m.reply_text(f"**Downloading:-**\n\n**📄 Title:-** `{name}\n\nQuality - {raw_text2}`\n\n**link:**`{url}`\n\n **Bot Made By Rajesh R Mahar**")
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
                     await prog.delete(True)
@@ -346,7 +346,7 @@ async def upload(bot: Client, m: Message):
     except Exception as e:
         await m.reply_text(e)
 
-    await m.reply_text(f"🔰DONE BABY💞🔰\nTotal failed downloads: {failed_count}")  # Report the failed count
+    await m.reply_text(f"🔰DONE BOSS💞🔰\nTotal failed downloads: {failed_count}")  # Report the failed count
 
 
 
