@@ -6,8 +6,8 @@
         "video-extract",
         "pyrogram"
     ],
-    "repository": "https://github.com/nikhilsaini098/Txt-to-video",
-    "success_url": "https://t.me/nklbotbackup",
+    "repository": "https://github.com/rajrmahar/Txt-to-video",
+    "success_url": "https://t.me/+ovw8WwlIcWZmYTdl",
     "stack": "heroku-22",
     "env": {
         "API_ID": {
