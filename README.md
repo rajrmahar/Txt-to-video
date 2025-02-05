@@ -13,5 +13,6 @@
 ```
 start - 🦋 Bot Alive Cheking
 stop - 🛑 Upload stop
-uplod - 🎬 Txt file upload
+upload - 🎬 Txt file upload
+
 ```
